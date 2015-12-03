@@ -16,13 +16,11 @@ namespace Util.UnitTest
             string _data = "我是中国人"
                 , _dataEncrypted = ""
                 , _dataDecrypted = "";
-            RsaKeyPair _rsaKeyPair;
+            RsaKeyPair _rsaKeyPair = new RsaKeyPair();
             RsaKeyFormat _rsaKeyFormat = RsaKeyFormat.PEM;
 
-            _rsaKeyPair = RsaHelper.GetRsaKey(_rsaKeyFormat);
-
-            _dataEncrypted = RsaHelper.Encrypt(_rsaKeyFormat, _rsaKeyPair.PublicKey, _data);
-            _dataDecrypted = RsaHelper.Decrypt(_rsaKeyFormat, _rsaKeyPair.PrivateKey, _dataEncrypted);
+            _dataEncrypted = RsaHelper.Encrypt(_rsaKeyFormat, _rsaKeyPair.PublicKey_PEM, _data);
+            _dataDecrypted = RsaHelper.Decrypt(_rsaKeyFormat, _rsaKeyPair.PrivateKey_PEM, _dataEncrypted);
 
             Assert.AreEqual(_data, _dataDecrypted, string.Format("Data = {0}, DataEncrypted = {1}, DataDecrypted = {2}", _data, _dataEncrypted, _dataDecrypted));
         }
