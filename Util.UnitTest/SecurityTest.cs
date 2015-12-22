@@ -13,7 +13,7 @@ namespace Util.UnitTest
         [TestMethod]
         public void TestRsaEncryptAndDecrypt()
         {
-            string _data = "我是中国人"
+            string _data = "I am union guy."
                 , _dataEncrypted = ""
                 , _dataDecrypted = "";
             RsaKeyPair _rsaKeyPair = new RsaKeyPair();
@@ -28,7 +28,7 @@ namespace Util.UnitTest
         [TestMethod]
         public void TestMd5Encrypt()
         {
-            string _data = "我是陈永彬"
+            string _data = "My name is Albin."
                 , _dataEncrypted1 = "", _dataEncrypted2 = ""
                 , _targetFileName = "TestMd5TragetFile.txt"
                 , _targetFileContent = "this is a test content";
