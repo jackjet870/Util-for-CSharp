@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Text;
 using System.IO;
 
-namespace Util.UnitTest
+namespace Util.UnitTest.Security
 {
     [TestClass]
     public class SecurityTest
